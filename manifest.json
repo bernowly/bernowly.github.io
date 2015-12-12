@@ -1,4 +1,11 @@
 {
-  "name": "townhouzz",
-  "gcm_sender_id": "678691462558"
+  "short_name": "Condd",
+  "name": "condd",
+  "gcm_sender_id": "678691462558",
+  "icons": [{
+    "src": "images/icon-144.png",
+    "type": "image/png",
+    "sizes": "144x144"
+  }],
+  "display": "standalone"
 }
