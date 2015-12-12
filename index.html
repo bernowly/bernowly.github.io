@@ -1,1 +1,28 @@
-Hello World
+<!DOCTYPE html>
+<html>
+<head>
+
+  <title>Push Notification codelab</title>
+
+  <link rel="manifest" href="manifest.json">
+  <script src="//www.parsecdn.com/js/parse-1.6.7.min.js"></script>
+  <script>
+      Parse.initialize("ulknsXLPGrI2zhIxrSm3Gkvn1slB56iQAFzJPxdK", "HThTATQMH5A3PnIXPuapVMCZMRPEKRylVnSPn0Xh");
+      var TestObject = Parse.Object.extend("TestObject");
+      var testObject = new TestObject();
+
+  </script>
+</head>
+
+<body>
+
+  <h1>Push Notification codelab</h1>
+
+  <p>This page must be accessed using HTTPS or via localhost.</p>
+
+  <button disabled>Subscribe</button>
+
+  <script src="js/main.js"></script>
+
+</body>
+</html>
