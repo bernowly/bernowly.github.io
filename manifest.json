@@ -1,6 +1,6 @@
 {
-  "short_name": "Condd",
-  "name": "Condd - Controle de Condomínio",
+  "short_name": "PWA Test",
+  "name": "PWA Test",
   "gcm_sender_id": "678691462558",
   "icons": [{
     "src": "images/icon-144.png",
