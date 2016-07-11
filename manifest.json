@@ -1,0 +1,8 @@
+{
+  "name": "Corretora de Bolso",
+  "theme_color": "#00897B",
+  "background_color": "#00897B",
+  "start_url": "index.html",
+  "display": "standalone",
+  "orientation": "portrait"
+}
