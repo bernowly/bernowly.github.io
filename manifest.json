@@ -1,7 +1,7 @@
 {
-  "name": "Corretora de Bolso",
-  "theme_color": "#00897B",
-  "background_color": "#00897B",
+  "name": "Williams Seguros",
+  "theme_color": "#D32F2F",
+  "background_color": "#D32F2F",
   "start_url": "index.html",
   "display": "standalone",
   "orientation": "portrait"
