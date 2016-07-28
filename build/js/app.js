@@ -72,10 +72,28 @@ function tirarFoto() {
 firebase.auth().onAuthStateChanged(function(user) {
     if (user) {
         console.log(user);
+        if ('serviceWorker' in navigator) {
+            console.log('Service Worker is supported');
+            navigator.serviceWorker.register('../../sw.js').then(function(reg) {
+                console.log(':^)', reg);
+                reg.pushManager.subscribe({
+                    userVisibleOnly: true
+                }).then(function(sub) {
+                    console.log('endpoint::', sub.endpoint);
+                    db.ref('messages/' + 123).set({
+                        new: true,
+                        code: sub.endpoint.substring(40)
+                    });
+                });
+            }).catch(function(error) {
+                console.log(':^(', error);
+            });
+        }
         localStorage.setItem('xpto-auth', user.displayName);
         localStorage.setItem('profile-email', user.email);
         localStorage.setItem('profile-image', user.photoURL);
         mainView.router.loadPage('home.html');
+
     } else {
 
     }

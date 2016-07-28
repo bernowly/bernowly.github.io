@@ -30,9 +30,11 @@ $$(document).on('ajaxComplete', function (e) {
 });
 
 
+
 $$(document).on('pageInit', function(e) {
 
     var page = e.detail.page;
+
     if (page.url === 'home.html') {
         var cpf = localStorage.getItem('cpf');
         var nome = localStorage.getItem('xpto-auth');
@@ -44,13 +46,15 @@ $$(document).on('pageInit', function(e) {
         // myApp.popup('.popup-ident');
         var pnome = nome.split(" ")[0];
         if (cpf == undefined) {
-            myApp.prompt('Olá '+pnome+'! Por favor digite o seu CPF', 'Vincular conta',
+            myApp.prompt('Olá '+pnome+'! Por favor digite o seu CPF/CNPJ', 'Vincular conta',
                 function(value) {
                     localStorage.setItem('cpf', value);
                 },
                 function() {}
             );
         }
+
+
     }
     /*
     var auth = localStorage.getItem('xpto-auth');

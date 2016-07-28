@@ -161,6 +161,17 @@
             storageBucket: "project-249339676566271086.appspot.com",
         };
         firebase.initializeApp(config);
+
+        if ('serviceWorker' in navigator) {
+         console.log('Service Worker is supported');
+         navigator.serviceWorker.register('sw.js').then(function(reg) {
+           console.log(':^)', reg);
+           // TODO
+         }).catch(function(err) {
+           console.log(':^(', err);
+         });
+        }
+
     </script>
     <script type="text/javascript" src="build/js/index.js"></script>
     <script type="text/javascript" src="build/js/app.js"></script>
